@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>메뉴 목록</title>
+    </head>
+    <body>
+
+    <!-- {{ menulist_html | safe }} -->
+
+    {% for menu in menus %}
+        {% if menu.name == '초코콘' %}
+        {% else %}
+            <a href="/menus/{{menu.id}}">{{menu.name}}</a><BR/>
+        {% endif %}
+    {% endfor %}
+
+
+    </body>
+</html>
